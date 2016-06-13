@@ -1,0 +1,11 @@
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\UnityEditor.dll
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\UnityEngine.dll
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\UnityEngine.xml
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\UnityEditor.xml
+G:\Unity3DProject\GameFramework\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+G:\Unity3DProject\GameFramework\obj\Debug\UnityVS.GameFramework.CSharp.csprojResolveAssemblyReference.cache
+G:\Unity3DProject\GameFramework\obj\Debug\Assembly-CSharp.dll
+G:\Unity3DProject\GameFramework\obj\Debug\Assembly-CSharp.pdb
