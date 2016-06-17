@@ -4,7 +4,6 @@
 // Feedback: zhangjia517@hotmail.com
 //---------------------------------------------------------
 
-
 using System;
 using UnityEngine;
 
@@ -14,10 +13,10 @@ public sealed class GameCore : MonoBehaviour
 
     private GameCore()
     {
-
     }
 
     private static GameCore m_Instance = null;
+
     public static GameCore Instance
     {
         get
@@ -40,22 +39,27 @@ public sealed class GameCore : MonoBehaviour
 
     //事件
     private EventManager m_EventManager = new EventManager();
+
     public static EventManager Event { get { return Instance.m_EventManager; } }
 
     //流程
     private ProcedureManager m_ProcedureManager = new ProcedureManager();
+
     public static ProcedureManager Procedure { get { return Instance.m_ProcedureManager; } }
 
     //场景
     private SceneManager m_SceneManager = new SceneManager();
+
     public static SceneManager Scene { get { return Instance.m_SceneManager; } }
 
     //数据池
     private DataPool m_DataPool = new DataPool();
+
     public static DataPool DataPool { get { return Instance.m_DataPool; } }
 
     // 网络
     private NetworkManager m_NetworkManager = new NetworkManager();
+
     public static NetworkManager Network { get { return Instance.m_NetworkManager; } }
 
     private void Start()
@@ -77,7 +81,7 @@ public sealed class GameCore : MonoBehaviour
         }
     }
 
-    void OnApplicationQuit()
+    private void OnApplicationQuit()
     {
         if (m_Instance == this)
         {
