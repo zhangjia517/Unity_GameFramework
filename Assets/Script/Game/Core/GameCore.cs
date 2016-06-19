@@ -13,7 +13,6 @@ public sealed class GameCore : MonoBehaviour
 
     private GameCore()
     {
-
     }
 
     private static GameCore m_Instance = null;
