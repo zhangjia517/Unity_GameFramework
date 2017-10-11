@@ -6,6 +6,7 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class GameCore : MonoBehaviour
 {
@@ -62,6 +63,11 @@ public sealed class GameCore : MonoBehaviour
 
     public static NetworkManager Network { get { return Instance.m_NetworkManager; } }
 
+    private void Awake()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += LoadScene;
+    }
+
     private void Start()
     {
         GameCore.Procedure.Init();
@@ -89,7 +95,7 @@ public sealed class GameCore : MonoBehaviour
         }
     }
 
-    private void OnLevelWasLoaded()
+    private void LoadScene(Scene scene, LoadSceneMode mode)
     {
         m_SceneManager.OnLoadingComplete();
     }

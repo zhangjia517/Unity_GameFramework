@@ -8,6 +8,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
@@ -16,6 +17,18 @@ public class Loading : MonoBehaviour
 
     private AsyncOperation m_AsyncOperation = null;
     private SceneDefine m_Scene = SceneDefine.EMPTY;
+
+    private void Awake()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += LoadScene;
+    }
+
+    private void LoadScene(Scene scene, LoadSceneMode mode)
+    {
+        Resources.UnloadUnusedAssets();
+        GC.Collect();
+
+    }
 
     private void Start()
     {
@@ -39,13 +52,7 @@ public class Loading : MonoBehaviour
     {
         Resources.UnloadUnusedAssets();
         GC.Collect();
-        m_AsyncOperation = Application.LoadLevelAsync(GameCore.Scene.SceneList[m_Scene]);
+        m_AsyncOperation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(GameCore.Scene.SceneList[m_Scene]);
         yield return m_AsyncOperation;
-    }
-
-    private void OnLevelWasLoaded()
-    {
-        Resources.UnloadUnusedAssets();
-        GC.Collect();
     }
 }
